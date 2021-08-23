@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Netpbm_Viewer"
              Startup="Application_Startup">
     <Application.Resources>
-         
+        <BitmapImage x:Key="refresh" UriSource="Command-Refresh-24.png"/>
     </Application.Resources>
 </Application>

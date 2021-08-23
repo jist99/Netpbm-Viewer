@@ -19,7 +19,7 @@
         
         <!-- Refresh button -->
         <Button Grid.Row="1" x:Name="RefreshButton" Width="24" Height="24" HorizontalAlignment="Right" Margin="12" Click="RefreshButton_Click">
-            <Image Source="D:\Programming\C#\_real projects\Netpbm Viewer\Netpbm Viewer\Command-Refresh-24.png"/>
+            <Image Source="{StaticResource refresh}"/>
         </Button>
 
     </Grid>
