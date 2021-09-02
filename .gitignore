@@ -341,3 +341,4 @@ healthchecksdb
 
 # Other ignores
 .aseprite
+/Netpbm Viewer/logo.aseprite
