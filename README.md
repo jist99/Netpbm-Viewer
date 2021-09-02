@@ -9,7 +9,7 @@ An application that views files of the Netpbm formats on Windows
 
 ---
 # Downloading
-The most recent version can be downloaded [from here](https://github.com/jist99/Netpbm-Viewer/releases/download/1.0.1/Netpbm.Viewer.exe)
+The most recent version can be downloaded [from here](https://github.com/jist99/Netpbm-Viewer/releases/download/1.1/Netpbm.Viewer.exe)
 
 ---
 Credits to [Nightowl](https://github.com/nightowl286) for helping me navigate WPF
