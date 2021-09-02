@@ -5,5 +5,6 @@
              Startup="Application_Startup">
     <Application.Resources>
         <BitmapImage x:Key="refresh" UriSource="Command-Refresh-24.png"/>
+        <BitmapImage x:Key="copy" UriSource="Copy-24.png"/>
     </Application.Resources>
 </Application>

@@ -31,6 +31,7 @@ namespace Netpbm_Viewer
 		}
 
 		public string fp = string.Empty;
+		private BitmapImage generatedImage = null;
 		
 		private void BrowseButton_Click(object sender, RoutedEventArgs e)
 		{
@@ -43,10 +44,7 @@ namespace Netpbm_Viewer
 			if(dialog.ShowDialog() == true)
 			{
 				fp = dialog.FileName;
-				var fs = dialog.OpenFile();
-
-				Parser parser = new Parser(fs);
-				OutputBmp.Source = parser.parse();
+				loadFile();
 			}
 		}
 
@@ -89,13 +87,23 @@ namespace Netpbm_Viewer
 		{
 			var refreshedFile = File.Open(fp, FileMode.Open);
 			Parser parser = new Parser(refreshedFile);
-			OutputBmp.Source = parser.parse();
+			generatedImage = parser.parse();
+			OutputBmp.Source = generatedImage;
 
 			//Close the file so other apps can update it
 			refreshedFile.Dispose();
 		}
 
-		//Keep the image inside the correct size
+		//Copies the image into the clipboard
+		private void CopyButton_Click(object sender, RoutedEventArgs e)
+		{
+			if(generatedImage != null)
+			{
+				Clipboard.SetImage(generatedImage);
+			}
+		}
+
+		//Keep the image inside the correct size -- kept here for future potential useage
 		/*private void ScrollViewer_SizeChanged(object sender, SizeChangedEventArgs e)
 		{
 			OutputBmp.Width = Scroller.ViewportWidth;
